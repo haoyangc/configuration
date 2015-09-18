@@ -359,6 +359,10 @@ let g:NERDTreeDirArrows=0 " cannot get powerline arrow to work in some environme
 " Vim-airline
 let g:airline_powerline_fonts = 1
 
+
+" Set up line number
+set number
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Tmux helper
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
