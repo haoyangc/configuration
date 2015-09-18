@@ -352,6 +352,9 @@ nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 " Disable NERDTreeDirArrows (use +dir -file)
 let g:NERDTreeDirArrows=0 " cannot get powerline arrow to work in some environments
+"let g:NERDTreeDirArrows = 1
+"let g:NERDTreeDirArrowExpandable = '>'
+"let g:NERDTreeDirArrowCollapsible = '<'
 
 " Vim-airline
 let g:airline_powerline_fonts = 1
