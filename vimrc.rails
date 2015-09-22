@@ -454,3 +454,8 @@ colorscheme desert
 "colorscheme railscasts
 highlight Normal guifg=grey90
 
+"hi TabLineFill ctermfg=Grey
+hi TabLine ctermbg=LightBlue
+hi TabLineSel ctermbg=Red
+"hi Title ctermfg=LightBlue ctermbg=Magenta
+
