@@ -114,7 +114,7 @@ hi def link CtrlPMatch CursorLine
 let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_switch_buffer = 'Et'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git\|node_modules\|bin\|\.hg\|\.svn\|^build$\|log\|resources\|coverage\|doc\|tmp\|public/assets\|vendor\|Android',
+  \ 'dir':  '\^.git$\|^node_modules$\|^bin$\|\^.hg$\|\^.svn$\|^build$\|^log$\|^resources$\|^coverage$\|^doc$\|^tmp$\|^public/assets$\|^vendor$\|^Android$',
   \ 'file': '\.jpg$\|\.exe$\|\.so$\|tags$\|\.dll$'
   \ }
 " nnoremap <C-b> :CtrlPBuffer<cr>
@@ -153,7 +153,9 @@ let g:rubyhash_map_keys = 0
 " Disable mappings from vim-ruby-refactoring
 let g:ruby_refactoring_map_keys = 0
 " Intent private methods
-let g:ruby_indent_access_modifier_style = 'outdent'
+
+"Disabling it because of strange line change behavior
+"let g:ruby_indent_access_modifier_style = 'outdent'
 
 "This one just tells the ultisnips plugin where it should look for my custom
 "snippets
