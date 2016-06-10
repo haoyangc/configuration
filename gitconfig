@@ -1,0 +1,5 @@
+[user]
+	email = haoyanghc@gmail.com
+	name = yang
+[core]
+	editor = /usr/local/Cellar/vim/7.4.1910/bin/vim
