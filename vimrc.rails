@@ -462,3 +462,13 @@ hi TabLine ctermbg=LightBlue
 hi TabLineSel ctermbg=Red
 "hi Title ctermfg=LightBlue ctermbg=Magenta
 
+"vmap <C-x> :!pbcopy<CR>  
+""map <C-c> :w !pbcopy<CR><CR> 
+"nmap <F2> :w !pbcopy<CR><CR>
+"vmap <C-v> :r !pbpaste<CR>
+"
+" Before having clipboard working, make sure vim is compiled with clipboard
+" enabled. 
+" > vim --version | grep "clipboard"
+" you shall see "+clipboard" rather than "-clipboard"
+set clipboard=unnamed
