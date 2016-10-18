@@ -107,5 +107,5 @@ export CLOUD="haoyangc.aka.amazon.com"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scriptin"
 
-alias copy-production-heatmap-draft="date +\"%m-%d-%Y\" | xargs -I draft-{} bash -c \"aws s3 sync s3://infra-capacity-planning-production/capacity-planning/dataset/ {} --exclude '*' --include 'DRAFT-*'\""
+alias copy-production-heatmap-draft="date +\"%m-%d-%Y\" | xargs -I {} bash -c \"aws s3 sync s3://infra-capacity-planning-production/capacity-planning/dataset/ draft-{} --exclude '*' --include 'DRAFT-*'\""
 
