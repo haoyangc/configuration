@@ -2,6 +2,8 @@
 # 
 #
 alias py="/opt/python3.3/bin/python3.3"
+alias jruby='$(brazil-bootstrap)/jruby1.7.x/dist/bin/jruby'
+alias jrake='jruby -S rake'
 #
 # Path to your oh-my-zsh installation.
 export ZSH=/home/local/ANT/haoyangc/.oh-my-zsh
