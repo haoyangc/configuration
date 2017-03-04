@@ -1,0 +1,12 @@
+eclipse-build
+.classpath
+.settings
+.project
+var
+/eclipse-bin
+*~
+*.iml
+build
+node_modules
+npm-debug.log
+
