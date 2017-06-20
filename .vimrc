@@ -475,6 +475,7 @@ hi TabLineSel ctermbg=Red
 " enabled. 
 " > vim --version | grep "clipboard"
 " you shall see "+clipboard" rather than "-clipboard"
+" For ubuntu, to have "+clipboard", just "sudo apt-get install vim-gtk"
 set clipboard=unnamed
 
 
@@ -483,3 +484,7 @@ set clipboard=unnamed
 :  %!python -m json.tool
 :endfunction
 nmap <leader>f :call Jsonf()<CR>
+
+" map ctrl+d in vim to run :sh so that we can toggle between bash and vim
+" quickly
+noremap <C-d> :sh<cr>
