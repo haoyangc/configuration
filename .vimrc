@@ -480,10 +480,10 @@ set clipboard=unnamed
 
 
 " Auto format json in a human readable way
-:function Jsonf()
-:  %!python -m json.tool
-:endfunction
-nmap <leader>f :call Jsonf()<CR>
+":function Jsonf()
+":  %!python -m json.tool
+":endfunction
+"nmap <leader>f :call Jsonf()<CR>
 
 " map ctrl+d in vim to run :sh so that we can toggle between bash and vim
 " quickly
