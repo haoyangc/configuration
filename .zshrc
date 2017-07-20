@@ -118,3 +118,19 @@ export NVM_DIR="/Users/haoyangc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias daily="ruby ~/configuration/daily/daily.rb"
+
+alias odin-ssh="ssh -L2009:localhost:2009 haoyangc.aka.amazon.com -f -N"
+
+alias fetchAllocationPlanId="bash ~/.fetchAllocationPlanId.sh $1"
+
+#Customized
+alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
+alias startMysqlServer='sudo /etc/init.d/mysql.server restart --skip-grant-tables'
+alias register_with_aaa='/apollo/env/AAAWorkspaceSupport/bin/register_with_aaa.py'
+alias cfb='ps aux | grep CloudForgeBuild | grep java | sed "s/\s\s*/ /g" | cut -d " " -f 2'
+alias kill-cfb='kill -9 $(cfb | awk "{print $1}")'
+alias start-cfb='kill-cfb; bb server'
+export PATH=/apollo/env/BarkCLI/bin:$PATH
+
+alias brazil-third-party-tool="/apollo/env/BrazilThirdPartyTool/bin/brazil-third-party-tool"
+alias timber-dump-example="bark -FetchLogs -OwnerEmail=cloudforge-procurement-timber@amazon.com -LogGroupName=CloudWormService/Prod/d% -s=2017-07-01T00:00:00Z -e=2017-07-01T00:59:00Z -path=/home/haoyangc/timber-dump"
