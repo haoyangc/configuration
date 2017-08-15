@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 alias bb='brazil-build'
 alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
 export PROD="titan-timber-1c-c4-256fa91e.us-east-1.amazon.com"
-export BETA="titan-timber-2a-corp-i-9dec3e46.us-west-2.amazon.com"
+export BETA="titan-timber-2a-corp-b5f88eb2.us-west-2.amazon.com"
 #export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home"
 
@@ -118,12 +118,19 @@ export NVM_DIR="/Users/haoyangc/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 alias daily="ruby ~/configuration/daily/daily.rb"
-
 alias odin-ssh="ssh -L2009:localhost:2009 haoyangc.aka.amazon.com -f -N"
 
 alias fetchAllocationPlanId="bash ~/.fetchAllocationPlanId.sh $1"
 
-#Customized
+git() {
+  if [[ $@ == "branch" ]]; then
+    command git branch -vv | more
+  elif [[ $@ == "lg" ]]; then
+    command git log --graph --oneline --decorate --all
+  else
+    command git "$@"
+  fi
+}
 alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
 alias startMysqlServer='sudo /etc/init.d/mysql.server restart --skip-grant-tables'
 alias register_with_aaa='/apollo/env/AAAWorkspaceSupport/bin/register_with_aaa.py'
@@ -134,3 +141,4 @@ export PATH=/apollo/env/BarkCLI/bin:$PATH
 
 alias brazil-third-party-tool="/apollo/env/BrazilThirdPartyTool/bin/brazil-third-party-tool"
 alias timber-dump-example="bark -FetchLogs -OwnerEmail=cloudforge-procurement-timber@amazon.com -LogGroupName=CloudWormService/Prod/d% -s=2017-07-01T00:00:00Z -e=2017-07-01T00:59:00Z -path=/home/haoyangc/timber-dump"
+
