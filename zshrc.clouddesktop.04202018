@@ -1,0 +1,82 @@
+source /apollo/env/envImprovement/var/zshrc
+
+export BRAZIL_WORKSPACE_DEFAULT_LAYOUT=short
+
+for f in AWSSCMDevTools SDETools envImprovement AmazonAwsCli OdinTools; do
+    if [[ -d /apollo/env/$f ]]; then
+        export PATH=$PATH:/apollo/env/$f/bin
+    fi
+done
+
+export AUTO_TITLE_SCREENS="NO"
+
+export PROMPT="
+%{$fg[white]%}(%D %*) <%?> [%~] $program %{$fg[default]%}
+%{$fg[cyan]%}%m %#%{$fg[default]%} "
+
+export RPROMPT=
+
+set-title() {
+    echo -e "\e]0;$*\007"
+}
+
+ssh() {
+    set-title $*;
+    /usr/bin/ssh -2 $*;
+    set-title $HOST;
+}
+
+alias e=emacs
+alias bb='/apollo/env/SDETools/bin/brazil-build'
+
+alias bba='brazil-build apollo-pkg'
+alias bre='brazil-runtime-exec'
+alias brc='brazil-recursive-cmd'
+alias bws='brazil ws'
+alias bwsuse='bws use --gitMode -p'
+alias bwscreate='bws create -n'
+alias brc=brazil-recursive-cmd
+alias bbr='brc brazil-build'
+alias bball='brc --allPackages'
+alias bbb='brc --allPackages brazil-build'
+alias bbra='bbr apollo-pkg'
+
+if [ -f ~/.zshrc-dev-dsk-post ]; then
+    source ~/.zshrc-dev-dsk-post
+fi
+
+alias cfb='ps aux | grep CloudForgeBuild | grep java | sed "s/\s\s*/ /g" | cut -d " " -f 2'
+alias kill-cfb='kill -9 $(cfb | awk "{print $1}")'
+alias start-cfb='kill-cfb; bb server'
+
+alias rebuildLib='brazil ws --clean; brazil ws --sync --md; bb webpack'
+
+cd /workplace/haoyangc
+
+# Octane CLIs (alias for BONES)
+alias brazil-octane='/apollo/env/OctaneBrazilTools/bin/brazil-octane'
+export PATH="$BRAZIL_CLI_BIN:$PATH"
+# AWS CLIs (alias for BONES)
+export PATH="/apollo/env/AmazonAwsCli/bin/:$PATH"
+# BONES environment variables
+export GROUP_ARG="--ldapGroup=infra-bps"
+export MAIL_LIST=infra-bps@amazon.com
+export BINDLE_ID=amzn1.bindle.resource.5jhkx6qiw4vvyws6b5ya
+export POSIX_TEAM="infra-bps"
+export PREFIX="Ibp"
+export ORGANIZATION=aws
+
+export BASE_LPT="--existing_base_package_name BpsBaseLpt"
+export ACCOUNT_ID="348767491767"
+export ACCOUNT_ID_ARG="--account_id ${ACCOUNT_ID}"
+
+alias getRuntime="echo 'output in <workspace>/env/<package>-<version>/runtime'; brazil-bootstrap"
+
+alias node='brazil-runtime-exec node'
+export PATH=/apollo/env/BarkCLI/bin:$PATH
+alias sam="brazil-build-tool-exec sam"
+export JAVA_HOME=/apollo/env/JavaSE8/jdk1.8
+export PATH=$JAVA_HOME/bin:$PATH
+# export LD_LIBRARY_PATH=/workplace/haoyangc/CloudForgeBuildWebsite/env/CloudForgeBuildWebsite-1.0/test-runtime/lib
+
+alias memcached='brazil-runtime-exec memcached'
