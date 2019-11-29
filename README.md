@@ -20,11 +20,14 @@ brew install tmux
 
 # Git
 ## git config (~/.gitconfig)
+https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 ```
 git config --global user.name "yang"
 git config --global user.email haoyangc91@gmail.com
 git config --global core.editor vim
 git config --global core.excludesfile ~/.gitignore_global
+git config --global core.pager ''
+# core.pager: setting it to empty string turns it off. otherwise `git branch` opens a new `alternate screen` which is annoying
 ```
 
 ## git ignore (~/.gitignore_global)
