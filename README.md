@@ -12,6 +12,11 @@ iTerm2 -> Preference -> Profiles -> Working Directory, select Advanced Configura
 
 
 ## XCode
+Plugin:
+Simply type cmd + shift + x (on a Mac) or ctrl + shift + x (on a PC) to bring up the View: Extensions panel, then click on the Install button to install the extension you want.
+Must have plugins: vim
+
+
 ## Intellij
 ## VSCode
 ## brew (Homebrew)
