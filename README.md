@@ -1,10 +1,13 @@
 Setup Guide for new Mac
 
 # Software
-Iterm
-XCode
-Intellij
-VSCode
+## Iterm
+* new tab with same path
+iTerm2 -> Preference -> Profiles -> Working Directory, select Reuse previous session's directory
+
+## XCode
+## Intellij
+## VSCode
 ## brew (Homebrew)
 Homebrew calls itself The missing package manager for macOS and is an essential tool for any developer.
 https://brew.sh/
