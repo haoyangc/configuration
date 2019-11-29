@@ -4,6 +4,12 @@ Setup Guide for new Mac
 ## Iterm
 * new tab with same path
 iTerm2 -> Preference -> Profiles -> Working Directory, select Reuse previous session's directory
+or
+iTerm2 -> Preference -> Profiles -> Working Directory, select Advanced Configuration
+
+* new window starting from a certain path
+iTerm2 -> Preference -> Profiles -> Working Directory, select Advanced Configuration
+
 
 ## XCode
 ## Intellij
