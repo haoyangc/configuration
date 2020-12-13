@@ -150,14 +150,15 @@ bindkey -v
 # 1. Install pipenv
 # brew install pipenv
 # (or if you have pip as system-wide package: pip install --user pipenv)
-# 2. create a directory as environment root and cd into it
-# mkdir pipenv1; cd pipenv1
+# 2. create a project directory as environment root and cd into it
+# mkdir proj; cd proj
 # 3. install packages with pipenv (instead of pip)
 # in prod: pipenv install <package>
 # in dev: pipenv install <package> --dev
 # 4-1. To activate or deactivate this project's virtualenv, run
-# to activate (in pipenv root): pipenv shell
-# to deactivate: deactivate
+# to enter (in pipenv root): pipenv shell
+# to leave : exit (or ^D (end of file))
+# note: deactivate won't work
 # 4-2. Alternatively, run a command inside the virtualenv with
 # to run command: pipenv run <your command>
 # for example: pipenv run python /path/to/script.py
