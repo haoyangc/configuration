@@ -120,13 +120,25 @@ PATH=$HOME/Library/Python/3.9/bin:$PATH
 # vi mode in ZSH
 bindkey -v
 
-# Python virtual environment activate & deactivate
+
+########################################################
+# Python virtual environment through venv and pip
+########################################################
 # 1. create venv in a certain path (once per env)
 # python3 -m venv /path/to/venv
 # 2. activate
 # source /path/to/venv/bin/activate
-# 3. deactivate
+# 3. (Opt) update pip
+# pip install --upgrade pip
+# 4. Install packages through pip
+# pip install <package_name>
+# 5. Generate 'requirements.txt' for declaring dependency versions
+# pip freeze > requirements.txt
+# 6. Install all dependencies from a 'requirements.txt' file
+# pip install -r requirements.txt
+# 7. deactivate
 # deactivate
+########################################################
 
 
 
