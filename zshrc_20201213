@@ -119,3 +119,14 @@ PATH=$HOME/Library/Python/3.9/bin:$PATH
 
 # vi mode in ZSH
 bindkey -v
+
+# Python virtual environment activate & deactivate
+# 1. create venv in a certain path (once per env)
+# python3 -m venv /path/to/venv
+# 2. activate
+# source /path/to/venv/bin/activate
+# 3. deactivate
+# deactivate
+
+
+
