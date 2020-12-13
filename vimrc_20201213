@@ -37,7 +37,8 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'gmarik/vundle'
 
 " Recently added Plugins
-Plugin 'scrooloose/nerdtree'
+" Plugin 'scrooloose/nerdtree'
+Plugin 'preservim/nerdtree'
 "Plugin 'bling/vim-airline' " cannot get powerline work on some environments
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 " All other Plugins

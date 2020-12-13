@@ -122,7 +122,8 @@ bindkey -v
 
 
 ########################################################
-# Python virtual environment through venv and pip
+# Python virtual environment
+# Option1: use venv (virtualenv) and pip
 ########################################################
 # 1. create venv in a certain path (once per env)
 # python3 -m venv /path/to/venv
@@ -138,6 +139,41 @@ bindkey -v
 # pip install -r requirements.txt
 # 7. deactivate
 # deactivate
+########################################################
+# Python virtual environment
+# Option2: use pipenv
+# pros:
+# 1. one tool (pipenv) instead of two (pip & virtualenv)
+# 2. dependency graph view: pipenv graph
+# 3. work with both requirements.txt and Pipfile
+########################################################
+# 1. Install pipenv
+# brew install pipenv
+# (or if you have pip as system-wide package: pip install --user pipenv)
+# 2. create a directory as environment root and cd into it
+# mkdir pipenv1; cd pipenv1
+# 3. install packages with pipenv (instead of pip)
+# in prod: pipenv install <package>
+# in dev: pipenv install <package> --dev
+# 4-1. To activate or deactivate this project's virtualenv, run
+# to activate (in pipenv root): pipenv shell
+# to deactivate: deactivate
+# 4-2. Alternatively, run a command inside the virtualenv with
+# to run command: pipenv run <your command>
+# for example: pipenv run python /path/to/script.py
+# 5. Install dependencies
+# in prod: pipenv install
+# in dev: pipenv install --dev
+# 
+# Others:
+# a. get virtualenvs location
+# pipenv --venv
+# b. dependency graph view
+# pipenv graph
+# c. check security vulnerabilities
+# pipenv check
+#
+#
 ########################################################
 
 
