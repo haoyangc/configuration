@@ -154,6 +154,7 @@ bindkey -v
 # mkdir proj; cd proj
 # 3. install packages with pipenv (instead of pip)
 # in prod: pipenv install <package>
+# or pipenv install requests==2.13.0
 # in dev: pipenv install <package> --dev
 # 4-1. To activate or deactivate this project's virtualenv, run
 # to enter (in pipenv root): pipenv shell
@@ -165,12 +166,18 @@ bindkey -v
 # 5. Install dependencies
 # in prod: pipenv install
 # in dev: pipenv install --dev
+# 6. Lock currently installed packages
+# pipenv lock
 # 
 # Others:
 # a. get virtualenvs location
 # pipenv --venv
 # b. dependency graph view
 # pipenv graph
+# c. list dependencies
+# pipenv list
+# d. generate requiremetns.txt
+# pipenv lock -r > requirements.txt
 # c. check security vulnerabilities
 # pipenv check
 #
