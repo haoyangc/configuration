@@ -523,3 +523,10 @@ autocmd FileType python nnoremap <buffer> <F10> :w<CR>:exec '!python3' shellesca
 " wrap or not wrap long line display
 " :set wrap
 " :set nowrap
+"
+":set showbreak=↪\
+:set showbreak=>
+:set list
+":set nolist
+"set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
+
