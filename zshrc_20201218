@@ -156,9 +156,11 @@ bindkey -v
 # in prod: pipenv install <package>
 # or pipenv install requests==2.13.0
 # in dev: pipenv install <package> --dev
+#
 # 4-1. To activate or deactivate this project's virtualenv, run
 # to enter (in pipenv root): pipenv shell
 # to leave : exit (or ^D (end of file))
+#
 # note: deactivate won't work
 # 4-2. Alternatively, run a command inside the virtualenv with
 # to run command: pipenv run <your command>
@@ -183,6 +185,53 @@ bindkey -v
 #
 #
 ########################################################
+
+alias pipenv-shell='pipenv shell'
+alias pipenv-shell-leave='exit'
+
+########################################################
+# MySQL
+########################################################
+alias mysql-start='mysql.server start'
+alias mysql-stop='mysql.server stop'
+alias mysql-daemon-start='brew services start mysql'
+alias mysql-daemon-stop='brew service stop mysql'
+
+########################################################
+# Regex Cheetsheet
+########################################################
+# 
+# ### Character classes
+# .	any character except newline
+# \w\d\s	word, digit, whitespace
+# \W\D\S	not word, digit, whitespace
+# [abc]	any of a, b, or c
+# [^abc]	not a, b, or c
+# [a-g]	character between a & g
+#
+# ### Anchors
+# ^abc$	start / end of the string
+# \b\B	word, not-word boundary
+#
+# ### Escaped characters
+# \.\*\\	escaped special characters
+# \t\n\r	tab, linefeed, carriage return
+#
+# ### Groups & Lookaround
+# (abc)	capture group
+# \1	backreference to group #1
+# (?:abc)	non-capturing group
+# (?=abc)	positive lookahead
+# (?!abc)	negative lookahead
+#
+# ### Quantifiers & Alternation
+# a*a+a?	0 or more, 1 or more, 0 or 1
+# a{5}a{2,}	exactly five, two or more
+# a{1,3}	between one & three
+# a+?a{2,}?	match as few as possible
+# ab|cd	match ab or cd
+########################################################
+
 
 
 

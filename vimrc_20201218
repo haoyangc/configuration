@@ -102,8 +102,10 @@ Plugin 'avakhov/vim-yaml'
 " Plugin 'mustache/vim-mustache-handlebars'
 " Plugin 'godlygeek/tabular'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
+" Bundle 'Valloric/YouCompleteMe'
+" For python autocompletion
+Plugin 'davidhalter/jedi-vim'
+" Plugin 'vim-syntastic/syntastic'
 
 " All of Plugins must be added before the following line
 call vundle#end()
@@ -527,8 +529,8 @@ autocmd FileType python nnoremap <buffer> <F10> :w<CR>:exec '!python3' shellesca
 "
 ":set showbreak=↪\
 :set showbreak=>
-:set list
-":set nolist
+":set list // show line end $
+:set nolist
 "set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
