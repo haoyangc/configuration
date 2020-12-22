@@ -118,7 +118,14 @@ alias pip=/usr/local/bin/pip3
 PATH=$HOME/Library/Python/3.9/bin:$PATH
 
 # vi mode in ZSH
-bindkey -v
+#bindkey -v
+# set -o vi
+#
+#######################################################
+# Command line cheat-sheet
+#######################################################
+# ^A -> to first of the line
+# ^E -> to end of the line
 
 
 ########################################################
@@ -196,6 +203,7 @@ alias mysql-start='mysql.server start'
 alias mysql-stop='mysql.server stop'
 alias mysql-daemon-start='brew services start mysql'
 alias mysql-daemon-stop='brew service stop mysql'
+alias mysql-login='mysql -u root -p'
 
 ########################################################
 # Regex Cheetsheet
@@ -231,6 +239,35 @@ alias mysql-daemon-stop='brew service stop mysql'
 # a+?a{2,}?	match as few as possible
 # ab|cd	match ab or cd
 ########################################################
+
+
+alias SSH_REMOTE='ssh haoyangc@127.0.0.1 -p 2022' # some cloud vm or local vm running in linux (Debian64)
+
+
+########################################################
+# Flask
+########################################################
+export FLASK_APP=hello.py
+export FLASK_ENV=development
+########################################################
+#
+########################################################
+# Git
+########################################################
+# 1. Add Remote
+# https://docs.github.com/en/free-pro-team@latest/github/using-git/adding-a-remote
+# git remote add origin https://github.com/user/repo.git
+#
+# 2. Set a remote branch <branchname> as upstream
+# git branch -u origin/main (assume <branchname>==main)
+#
+# git rebase origin/main -i
+#
+# git push origin HEAD main
+
+########################################################
+#
+
 
 
 
